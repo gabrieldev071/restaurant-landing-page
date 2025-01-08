@@ -1,0 +1,25 @@
+
+
+.baseContainer {
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  html {
+    font-size: 16px; // Define o tamanho base
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $font-stack;
+    line-height: 1.5;
+    background-color: #fff9ea;
+    color: #333;
+}
+

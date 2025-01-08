@@ -1,0 +1,64 @@
+.header__nav {
+    @include flex-row-space-between;
+    width: 100%;
+    padding: 16px 24px;
+    background-color: #fff;
+
+    .header__menu {
+        display: flex;
+        gap: 48px;
+    }
+
+    .header__logo {
+        font-size: 24px;
+        color: #e9a209;
+    }
+
+    .header__menu-link {
+        color: #1d1d1d;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #e9a209;
+        }
+    }
+
+    .header__toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+
+        i {
+            color: #1d1d1d;
+        }
+    }
+
+    @media screen and (max-width: 1170px) {
+        .header__menu, .btn-laranja {
+            display: none;
+            flex-direction: column;
+            gap: 16px;
+            text-align: center;
+            background-color: #fff;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            right: 0;
+            padding: 16px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            &.active {
+                display: flex;
+            }
+        }
+
+
+        .header__toggle {
+            display: block;
+        }
+    }
+}
