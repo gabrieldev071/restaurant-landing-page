@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurante Sabor Divino</title>
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Font Awesome -->
-
     <script src="https://kit.fontawesome.com/78f50e1103.js" crossorigin="anonymous"></script>
-
-    <!-- Jquery -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-
 <body>
-    <header class="header">
+    <header class="header baseContainer">
         <nav class="header__nav">
-            <div class="header__logo">Costela Defumada</div>
-
-            <ul class="header__menu" id="header__menu">
+            <a href="/" class="header__logo">Costela Defumada</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="header__menu">
                 <li class="header__menu-item"><a href="#home" class="header__menu-link">Início</a></li>
                 <li class="header__menu-item"><a href="#about" class="header__menu-link">Sobre</a></li>
                 <li class="header__menu-item"><a href="#menu" class="header__menu-link">Cardápio</a></li>
                 <li class="header__menu-item"><a href="#contact" class="header__menu-link">Contato</a></li>
             </ul>
-            <button class="btn btn-laranja">
-                Peça aqui
-            </button>
-            <button class="header__toggle" id="header__toggle">
-                <i class="fa-solid fa-bars"></i>
-            </button>
         </nav>
     </header>
+
+    <main id="header__main">  <!-- content -->
+        <section>
+            <div class="title">
+                <h1>O sabor que vai até você</h1>
+            </div>
+            <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci neque at, quae nesciunt vel laboriosam. Dignissimos, rem ea enim necessitatibus perspiciatis sunt perferendis consequatur doloribus, molestias laborum voluptate! Eius, laborum?
+            </p>
+            <div id="cta_buttons">
+                <a href="http://" class="btn ">
+
+                </a>
+            </div>
+        </section>
+    </main>
 
     <section id="contact" class="contact">
         <h2>Contato</h2>
@@ -46,12 +51,10 @@
             <button type="submit">Enviar</button>
         </form>
     </section>
-
     <footer class="footer">
         <p>&copy; 2025 Sabor Divino. Todos os direitos reservados.</p>
     </footer>
 
     <script src="./assets/js/navbar.js"></script>
 </body>
-
 </html>
