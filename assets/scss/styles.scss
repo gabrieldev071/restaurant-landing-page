@@ -12,13 +12,16 @@
 // Layout
 @import "layout/header.scss";
 @import "layout/footer.scss";
-@import "layout/navigation.scss";
 @import "layout/grid.scss";
+@import "layout/main.scss";
 
 // Componentes
 @import "components/buttons.scss";
 @import "components/forms.scss";
 @import "components/cards.scss";
+@import "components/dropdown.scss";
+@import "components/icons.scss";
+@import "components/modal.scss";
 
 
 // Páginas específicas

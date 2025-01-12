@@ -1,0 +1,256 @@
+
+/* Primeira Seção */
+.main__section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Geral */
+.main__filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  /* Dropdown */
+  .dropdown {
+    position: relative;
+    text-transform: uppercase;
+  }
+  
+  .dropdown__button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+  
+  .dropdown__icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown__list {
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 10px 0 0;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    z-index: 1000;
+    display: none;
+  }
+  
+  .dropdown__item {
+    padding: 8px 12px;
+    font-size: 1.6rem;
+  }
+  
+  .dropdown__link {
+    color: #333;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown__link:hover {
+    background-color: #f4f4f4;
+    color: #000;
+  }
+
+  .fa-shopping-cart[data-count]:after {
+    content: attr(data-count);
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    padding: 2px 6px;
+  }
+  
+  
+  /* Mostrar lista ativa */
+  .dropdown__list--visible {
+    display: block;
+  }
+  
+  .dropdown__button[aria-expanded="true"] .dropdown__icon {
+    transform: rotate(180deg);
+  }
+  
+  /* Search */
+  .search {
+   /*  flex: 1; */
+   width: 30%;
+  }
+  
+  .search__input {
+    width: 100%;
+    padding: 10px 10px 10px 35px; /* Espaço para o ícone */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  
+  .search__input:focus {
+    outline: 2px solid #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+
+  /* Estilização da lupa no campo de busca */
+.search__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search__icon {
+    position: absolute;
+    left: 10px;
+    color: #aaa;
+    font-size: 1.2rem;
+  }
+  
+  /* Categoria */
+.categories {
+    padding: 20px 0;
+  }
+
+  .category__title-wrapper {
+    background: url('/assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  .categories__title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .category {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  
+  .category__title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .category__description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    
+  }
+  
+  .category__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px); /* 3 cards por linha */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  
+  .card__image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .card__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card__description {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .card__serves {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .card__price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .card__button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .card__button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .card {
+      width: calc(50% - 20px); /* 2 cards por linha em telas menores */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      width: 100%; /* 1 card por linha em telas pequenas */
+    }
+  }

@@ -42,7 +42,7 @@ projeto-landing-page/
 │   │   │   ├── _header.scss
 │   │   │   ├── _footer.scss
 │   │   │   ├── _navigation.scss
-│   │   │   └── _grid.scss
+│   │   │   └── 
 │   │   │
 │   │   ├── pages/           # Estilos específicos de páginas
 │   │   │   └── _home.scss

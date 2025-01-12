@@ -71,7 +71,7 @@ a {
 }
 
 html {
-  font-size: 16px;
+  font-size: 62.5%;
   box-sizing: border-box;
 }
 
@@ -82,43 +82,69 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
-  background-color: #fff9ea;
+  background-color: #f2f2f2;
   color: #333;
-  overflow: hidden;
 }
 
 .header {
   width: 100%;
-  background-color: rgb(244.45, 241.29, 236.55);
+  height: 180px;
+  background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url("/assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  color: #f3f1ee;
+  gap: 1.6rem;
+}
+
+.header__store {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.header__store span {
+  font-weight: bold;
+}
+
+.header__logoImage-img {
+  height: 100px;
 }
 
 .header__nav {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 8vh;
+  width: 100%;
 }
 .header__nav .header__logo {
-  font-size: 24px;
+  font-size: 1.6rem;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  color: #e9a209;
-  text-decoration: none;
+  font-weight: bold;
 }
 .header__nav .header__menu {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  font-size: 1.6rem;
 }
 .header__nav .header__menu .header__menu-item {
-  letter-spacing: 3px;
-  margin-left: 32px;
+  text-transform: uppercase;
 }
 .header__nav .header__menu .header__menu-item .header__menu-link {
-  text-decoration: none;
-  color: #e9a209;
-  transition: color 0.3s ease;
+  margin: 0.2rem;
+  transition: all 200ms ease;
+}
+.header__nav .header__menu .header__menu-item .header__menu-link i {
+  font-weight: 600px;
 }
 .header__nav .header__menu .header__menu-item .header__menu-link:hover {
-  color: #66ac70;
+  border-bottom: 3px solid #f3f1ee;
 }
 .header__nav .mobile-menu {
   display: none;
@@ -126,7 +152,7 @@ body {
 .header__nav .mobile-menu div {
   width: 32px;
   height: 2px;
-  background: #180202;
+  background: #fff;
   margin: 8px;
 }
 @media (max-width: 999px) {
@@ -159,6 +185,318 @@ body {
   }
 }
 
+/* ===============================
+   Footer
+================================ */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__column {
+  flex: 1 1 200px;
+  text-align: left;
+}
+
+.footer__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.footer__link {
+  color: #ddd;
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.footer__icon {
+  background-color: #555;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  width: 40px;
+}
+
+.footer__icon:hover {
+  background-color: #007bff;
+}
+
+/* Primeira Seção */
+.main__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Geral */
+.main__filters {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  text-transform: uppercase;
+}
+
+.dropdown__button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.dropdown__icon {
+  transition: transform 0.3s ease;
+}
+
+.dropdown__list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 10px 0 0;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  z-index: 1000;
+  display: none;
+}
+
+.dropdown__item {
+  padding: 8px 12px;
+  font-size: 1.6rem;
+}
+
+.dropdown__link {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown__link:hover {
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+.fa-shopping-cart[data-count]:after {
+  content: attr(data-count);
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+/* Mostrar lista ativa */
+.dropdown__list--visible {
+  display: block;
+}
+
+.dropdown__button[aria-expanded=true] .dropdown__icon {
+  transform: rotate(180deg);
+}
+
+/* Search */
+.search {
+  /*  flex: 1; */
+  width: 30%;
+}
+
+.search__input {
+  width: 100%;
+  padding: 10px 10px 10px 35px; /* Espaço para o ícone */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search__input:focus {
+  outline: 2px solid #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilização da lupa no campo de busca */
+.search__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search__icon {
+  position: absolute;
+  left: 10px;
+  color: #aaa;
+  font-size: 1.2rem;
+}
+
+/* Categoria */
+.categories {
+  padding: 20px 0;
+}
+
+.category__title-wrapper {
+  background: url("/assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.categories__title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.category {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.category__title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.category__description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.category__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 20px); /* 3 cards por linha */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.card__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card__description {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.card__serves {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.card__price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card__button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.card__button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px); /* 2 cards por linha em telas menores */
+  }
+}
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* 1 card por linha em telas pequenas */
+  }
+}
 .btn {
   display: flex;
   flex-direction: row;
@@ -179,6 +517,180 @@ body {
 .btn.btn-laranja:hover {
   background-color: rgb(245.7, 198.9, 78.3);
   transition: background-color 0.3s ease;
+}
+
+/* ===============================
+   Formulário de Contato
+================================ */
+.contact {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact__input,
+.contact__textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px;
+  width: 100%;
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.contact__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact__button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.contact__button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal base */
+.cart-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.cart-modal__content {
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cart-modal__close {
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  float: right;
+}
+
+.cart-modal__title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cart-modal__items {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cart-modal__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-modal__item-name {
+  flex: 2;
+}
+
+.cart-modal__item-quantity {
+  flex: 1;
+  text-align: center;
+}
+
+.cart-modal__item-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cart-modal__item-actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.cart-modal__item-actions button:hover {
+  background-color: #0056b3;
+}
+
+.cart-modal__total {
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.cart-modal__checkout {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.cart-modal__checkout:hover {
+  background-color: #0056b3;
 }
 
 /*# sourceMappingURL=styles.css.map */
