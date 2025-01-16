@@ -1,204 +1,456 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Costelaria Barba Branca - As melhores costelas assadas de Campina Grande, PB. Confira nosso cardápio!"
+    />
+    <title>Costelaria Barba Branca</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7xvPSv8f6bqZYP45PgoeEtIRrJ6C3EZdj9"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/78f50e1103.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Costelaria Barba Branca - As melhores costelas assadas de Campina Grande, PB. Confira nosso cardápio!">
-  <title>Costelaria Barba Branca</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7xvPSv8f6bqZYP45PgoeEtIRrJ6C3EZdj9" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/78f50e1103.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <!-- HEADER -->
-  <header class="header baseContainer">
-    <div class="header__logoImage">
-      <a href="/">
-        <img src="./assets/img/LOGO COSTELARIA BARBA BRANCA.png" alt="Logo da Costelaria Barba Branca"
-          class="header__logoImage-img">
-      </a>
-    </div>
-    <nav class="header__nav">
-      <div class="header__store">
-        <h1 class="header__store-title">
-          <a href="/" class="header__logo">COSTELARIA BARBA BRANCA</a>
-        </h1>
-        <h2 class="header__store-address">R. Lino Gomes Filho, 992a - Castelo Branco, Campina Grande - PB, 58406-110
-        </h2>
-        <span class="header__store-status">
-          <i class="material-icons icon-status js-icon-status on" aria-hidden="true"></i>
-          Aberto aos Dom, 10h30 às 15h
-        </span>
+  <body>
+    <!-- HEADER -->
+    <header class="header baseContainer">
+      <div class="header__logoImage">
+        <a href="/">
+          <img
+            src="./assets/img/LOGO COSTELARIA BARBA BRANCA.png"
+            alt="Logo da Costelaria Barba Branca"
+            class="header__logoImage-img"
+          />
+        </a>
       </div>
-      <div class="mobile-menu" aria-label="Menu Mobile">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-      <ul class="header__menu">
-        <li class="header__menu-item"><a href="#about" class="header__menu-link">Sobre nós</a></li>
-        <li class="header__menu-item"><a href="#menu" class="header__menu-link">Cardápio</a></li>
-        <li class="header__menu-item"><a href="#contact" class="header__menu-link">Contato</a></li>
-        <li class="header__menu-item"><a href="#" class="header__menu-link" aria-label="Instagram"><i
-              class="fab fa-instagram"></i></a></li>
-        <li class="header__menu-item"><a href="#" class="header__menu-link" aria-label="Facebook"><i
-              class="fab fa-facebook-f"></i></a></li>
-        <li class="header__menu-item"><a href="#" class="header__menu-link" aria-label="Carrinho"><i
-              class="fas fa-shopping-cart"></i></a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- MAIN -->
-  <main id="main" class="main baseContainer">
-    <section class="main__filters">
-      <!-- Dropdown Section -->
-      <div class="dropdown">
-        <button class="dropdown__button" type="button" aria-expanded="false">
-          Categorias
-          <i class="dropdown__icon fas fa-chevron-down"></i>
-        </button>
-        <ul class="dropdown__list" hidden>
-          <li class="dropdown__item">
-            <a href="#" class="dropdown__link">Costelas</a>
+      <nav class="header__nav">
+        <div class="header__store">
+          <h1 class="header__store-title">
+            <a href="/" class="header__logo">COSTELARIA BARBA BRANCA</a>
+          </h1>
+          <h2 class="header__store-address">
+            R. Lino Gomes Filho, 992a - Castelo Branco, Campina Grande - PB,
+            58406-110
+          </h2>
+          <span class="header__store-status">
+            <i
+              class="material-icons icon-status js-icon-status on"
+              aria-hidden="true"
+            ></i>
+            Aberto aos Dom, 10h30 às 15h
+          </span>
+        </div>
+        <div class="mobile-menu" aria-label="Menu Mobile">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="#about" class="header__menu-link">Sobre nós</a>
           </li>
-          <li class="dropdown__item">
-            <a href="#" class="dropdown__link">Opcionais</a>
+          <li class="header__menu-item">
+            <a href="#menu" class="header__menu-link">Cardápio</a>
           </li>
-          <li class="dropdown__item">
-            <a href="#" class="dropdown__link">Bebidas</a>
+          <li class="header__menu-item">
+            <a href="#contact" class="header__menu-link">Contato</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link" aria-label="Carrinho"
+              ><i class="fas fa-shopping-cart"></i
+            ></a>
           </li>
         </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main id="main" class="main baseContainer">
+      <section class="main__filters">
+        <!-- Dropdown Section -->
+        <div class="dropdown">
+          <button class="dropdown__button" type="button" aria-expanded="false">
+            Categorias
+            <i class="dropdown__icon fas fa-chevron-down"></i>
+          </button>
+          <ul class="dropdown__list" hidden>
+            <li class="dropdown__item">
+              <a href="#" class="dropdown__link">Costelas</a>
+            </li>
+            <li class="dropdown__item">
+              <a href="#" class="dropdown__link">Opcionais</a>
+            </li>
+            <li class="dropdown__item">
+              <a href="#" class="dropdown__link">Bebidas</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search">
+          <label for="search" class="search__label sr-only"></label>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            class="search__input"
+            placeholder="Busque por um item na loja"
+          />
+        </div>
+      </section>
+
+      <!-- Section de Categorias -->
+
+      <section class="categories">
+        <!-- Banner para Costelas -->
+        <div class="category__title-wrapper">
+          <h3 class="category__title">Costelas</h3>
+        </div>
+        <p class="category__description">
+          As melhores costelas assadas, preparadas com temperos especiais.
+        </p>
+        <!-- Categoria: Costelas -->
+        <article class="category">
+          <div class="category__cards">
+            <!-- Card: Costela Tradicional -->
+            <div class="card">
+              <div class="card__img">
+                <img
+                  src="./assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg"
+                  alt="Costela Especial"
+                  class="card--image"
+                />
+              </div>
+              <div class="card__text">
+                <h4 class="card__title">Costela Tradicional</h4>
+                <p class="card__description">
+                  Suculenta costela com molho barbecue.
+                </p>
+                <p class="card__serves">Serve: 2 pessoas</p>
+                <div class="card__price">
+                  <p class="card__price-number">R$ 79,90</p>
+                  <button
+                    class="card__button add-to-cart"
+                    data-id="3"
+                    data-name="Suco Natural"
+                    data-price="12.90"
+                    aria-label="Adicionar ao carrinho"
+                  >
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img
+                  src="./assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg"
+                  alt="Costela Especial"
+                  class="card--image"
+                />
+              </div>
+              <div class="card__text">
+                <h4 class="card__title">Costela Tradicional</h4>
+                <p class="card__description">
+                  Suculenta costela com molho barbecue.
+                </p>
+                <p class="card__serves">Serve: 2 pessoas</p>
+                <div class="card__price">
+                  <p class="card__price-number">R$ 79,90</p>
+                  <button
+                    class="card__button add-to-cart"
+                    data-id="3"
+                    data-name="Suco Natural"
+                    data-price="12.90"
+                    aria-label="Adicionar ao carrinho"
+                  >
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img
+                  src="./assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg"
+                  alt="Costela Especial"
+                  class="card--image"
+                />
+              </div>
+              <div class="card__text">
+                <h4 class="card__title">Costela Tradicional</h4>
+                <p class="card__description">
+                  Suculenta costela com molho barbecue.
+                </p>
+                <p class="card__serves">Serve: 2 pessoas</p>
+                <div class="card__price">
+                  <p class="card__price-number">R$ 79,90</p>
+                  <button
+                    class="card__button add-to-cart"
+                    data-id="3"
+                    data-name="Suco Natural"
+                    data-price="12.90"
+                    aria-label="Adicionar ao carrinho"
+                  >
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img
+                  src="./assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg"
+                  alt="Costela Especial"
+                  class="card--image"
+                />
+              </div>
+              <div class="card__text">
+                <h4 class="card__title">Costela Tradicional</h4>
+                <p class="card__description">
+                  Suculenta costela com molho barbecue.
+                </p>
+                <p class="card__serves">Serve: 2 pessoas</p>
+                <div class="card__price">
+                  <p class="card__price-number">R$ 79,90</p>
+                  <button
+                    class="card__button add-to-cart"
+                    data-id="3"
+                    data-name="Suco Natural"
+                    data-price="12.90"
+                    aria-label="Adicionar ao carrinho"
+                  >
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img
+                  src="./assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg"
+                  alt="Costela Especial"
+                  class="card--image"
+                />
+              </div>
+              <div class="card__text">
+                <h4 class="card__title">Costela Tradicional</h4>
+                <p class="card__description">
+                  Suculenta costela com molho barbecue.
+                </p>
+                <p class="card__serves">Serve: 2 pessoas</p>
+                <div class="card__price">
+                  <p class="card__price-number">R$ 79,90</p>
+                  <button
+                    class="card__button add-to-cart"
+                    data-id="3"
+                    data-name="Suco Natural"
+                    data-price="12.90"
+                    aria-label="Adicionar ao carrinho"
+                  >
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img
+                  src="./assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg"
+                  alt="Costela Especial"
+                  class="card--image"
+                />
+              </div>
+              <div class="card__text">
+                <h4 class="card__title">Costela Tradicional</h4>
+                <p class="card__description">
+                  Suculenta costela com molho barbecue.
+                </p>
+                <p class="card__serves">Serve: 2 pessoas</p>
+                <div class="card__price">
+                  <p class="card__price-number">R$ 79,90</p>
+                  <button
+                    class="card__button add-to-cart"
+                    data-id="3"
+                    data-name="Suco Natural"
+                    data-price="12.90"
+                    aria-label="Adicionar ao carrinho"
+                  >
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Banner para Bebidas -->
+        <div class="category__title-wrapper">
+          <h3 class="category__title">Bebidas</h3>
+        </div>
+        <p class="category__description">
+          Uma seleção de bebidas para acompanhar sua refeição.
+        </p>
+        <!-- Categoria: Bebidas -->
+        <article class="category">
+          <div class="category__cards">
+            <!-- Card: Suco Natural -->
+            <div class="card">
+              <div class="card__img">
+                <img
+                  src="./assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg"
+                  alt="Suco Natural"
+                  class="card--image"
+                />
+              </div>
+              <div class="card__text">
+                <h4 class="card__title">Suco Natural</h4>
+                <p class="card__description">
+                  Suco de frutas naturais (500ml).
+                </p>
+
+                <div class="card__price">
+                  <p class="card__price-number">R$ 12,90</p>
+                  <button
+                    class="card__button add-to-cart"
+                    data-id="3"
+                    data-name="Suco Natural"
+                    data-price="12.90"
+                    aria-label="Adicionar ao carrinho"
+                  >
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Outros Cards -->
+          </div>
+        </article>
+
+        <!-- Banner para Opcionais -->
+        <div class="category__title-wrapper">
+          <h3 class="category__title">Opcionais</h3>
+        </div>
+        <p class="category__description">
+          Uma seleção de bebidas para acompanhar sua refeição.
+        </p>
+        <!-- Categoria: Opcionais -->
+        <article class="category">
+          <div class="category__cards">
+            <!-- Card: Feijão Tropeiro -->
+            <div class="card">
+              <div class="card__img">
+                <img
+                  src="./assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg"
+                  alt="Feijão Tropeiro"
+                  class="card--image"
+                />
+              </div>
+              <div class="card__text">
+                <h4 class="card__title">Feijão Tropeiro</h4>
+                <p class="card__description">
+                  Acompanhamento tradicional e delicioso.
+                </p>
+                <div class="card__price">
+                  <p class="card__price-number">R$ 14,90</p>
+                  <button
+                    class="card__button add-to-cart"
+                    data-id="3"
+                    data-name="Suco Natural"
+                    data-price="14.90"
+                    aria-label="Adicionar ao carrinho"
+                  >
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Outros Cards -->
+          </div>
+        </article>
+      </section>
+
+      <!-- Modal do Carrinho -->
+      <div class="cart-modal" id="cartModal">
+        <div class="cart-modal__content">
+          <button
+            class="cart-modal__close"
+            id="closeCartModal"
+            aria-label="Fechar carrinho"
+          >
+            &times;
+          </button>
+          <h2 class="cart-modal__title">Carrinho</h2>
+          <ul class="cart-modal__items" id="cartItems">
+            <!-- Itens do carrinho aparecerão aqui -->
+          </ul>
+          <div class="cart-modal__footer">
+            <p class="cart-modal__total">
+              Total: <span id="cartTotal">R$ 0,00</span>
+            </p>
+            <button class="cart-modal__checkout">Finalizar Compra</button>
+          </div>
+        </div>
       </div>
-  
-      <!-- Search Section -->
-      <div class="search">
-        <label for="search" class="search__label sr-only">Busca</label>
+    </main>
+
+    <!-- CONTATO -->
+    <section id="contact" class="contact baseContainer">
+      <h2 class="contact__title">Contato</h2>
+      <form action="#" method="POST" class="contact__form">
         <input
-          type="search"
-          name="search"
-          id="search"
-          class="search__input"
-          placeholder="Busque por um item na loja"
+          type="text"
+          name="name"
+          class="contact__input"
+          placeholder="Nome"
+          required
         />
-      </div>
+        <input
+          type="email"
+          name="email"
+          class="contact__input"
+          placeholder="Email"
+          required
+        />
+        <textarea
+          name="message"
+          class="contact__textarea"
+          placeholder="Mensagem"
+          required
+        ></textarea>
+        <button type="submit" class="contact__button">Enviar</button>
+      </form>
     </section>
+    <!-- FOOTER -->
+    <footer class="footer baseContainer">
+      <p class="footer__text">
+        &copy; 2025 Costelaria Barba Branca. Todos os direitos reservados.
+      </p>
+    </footer>
 
-    <!-- Section de Categorias -->
-
-    <section class="categories">
-
-      <!-- Banner para Costelas -->
-      <div class="category__title-wrapper">
-        <h3 class="category__title">Costelas</h3>
-      </div>
-      <!-- Categoria: Costelas -->
-      <article class="category">
-        <p class="category__description">As melhores costelas assadas, preparadas com temperos especiais.</p>
-        <div class="category__cards">
-          <!-- Card: Costela Tradicional -->
-          <div class="card">
-            <img src="./assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg" alt="Costela Especial" class="card__image">
-            <h4 class="card__title">Costela Tradicional</h4>
-            <p class="card__description">Suculenta costela com molho barbecue.</p>
-            <p class="card__serves">Serve: 2 pessoas</p>
-            <p class="card__price">R$ 79,90</p>
-            <button class="card__button add-to-cart" data-id="1" data-name="Costela Tradicional" data-price="79.90" aria-label="Adicionar ao carrinho">
-              <i class="fas fa-plus" aria-hidden="true"></i>
-            </button>
-          </div>
-          <!-- Outros Cards -->
-        </div>
-      </article>
-    
-      <!-- Banner para Bebidas -->
-      <div class="category__title-wrapper">
-        <h3 class="category__title">Bebidas</h3>
-      </div>
-      <!-- Categoria: Bebidas -->
-      <article class="category">
-        <p class="category__description">Uma seleção de bebidas para acompanhar sua refeição.</p>
-        <div class="category__cards">
-          <!-- Card: Suco Natural -->
-          <div class="card">
-            <img src="./assets/img/suco-natural.jpg" alt="Suco Natural" class="card__image">
-            <h4 class="card__title">Suco Natural</h4>
-            <p class="card__description">Suco de frutas naturais (500ml).</p>
-            <p class="card__price">R$ 12,90</p>
-            <button class="card__button add-to-cart" data-id="3" data-name="Suco Natural" data-price="12.90" aria-label="Adicionar ao carrinho">
-              <i class="fas fa-plus" aria-hidden="true"></i>
-            </button>
-          </div>
-          <!-- Outros Cards -->
-        </div>
-      </article>
-    
-      <!-- Banner para Opcionais -->
-      <div class="category__title-wrapper">
-        <h3 class="category__title">Opcionais</h3>
-      </div>
-      <!-- Categoria: Opcionais -->
-      <article class="category">
-        <p class="category__description">Acompanhe seu prato com os melhores adicionais.</p>
-        <div class="category__cards">
-          <!-- Card: Feijão Tropeiro -->
-          <div class="card">
-            <img src="./assets/img/feijao-tropeiro.jpg" alt="Feijão Tropeiro" class="card__image">
-            <h4 class="card__title">Feijão Tropeiro</h4>
-            <p class="card__description">Acompanhamento tradicional e delicioso.</p>
-            <p class="card__price">R$ 14,90</p>
-            <button class="card__button add-to-cart" data-id="4" data-name="Feijão Tropeiro" data-price="14.90" aria-label="Adicionar ao carrinho">
-              <i class="fas fa-plus" aria-hidden="true"></i>
-            </button>
-          </div>
-          <!-- Outros Cards -->
-        </div>
-      </article>
-    
-    </section>
-    
-
-    <!-- Modal do Carrinho -->
-    <div class="cart-modal" id="cartModal">
-      <div class="cart-modal__content">
-        <button class="cart-modal__close" id="closeCartModal" aria-label="Fechar carrinho">&times;</button>
-        <h2 class="cart-modal__title">Carrinho</h2>
-        <ul class="cart-modal__items" id="cartItems">
-          <!-- Itens do carrinho aparecerão aqui -->
-        </ul>
-        <div class="cart-modal__footer">
-          <p class="cart-modal__total">Total: <span id="cartTotal">R$ 0,00</span></p>
-          <button class="cart-modal__checkout">Finalizar Compra</button>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <!-- CONTATO -->
-  <section id="contact" class="contact">
-    <h2 class="contact__title">Contato</h2>
-    <form action="#" method="POST" class="contact__form">
-      <input type="text" name="name" class="contact__input" placeholder="Nome" required>
-      <input type="email" name="email" class="contact__input" placeholder="Email" required>
-      <textarea name="message" class="contact__textarea" placeholder="Mensagem" required></textarea>
-      <button type="submit" class="contact__button">Enviar</button>
-    </form>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer baseContainer">
-    <p class="footer__text">&copy; 2025 Costelaria Barba Branca. Todos os direitos reservados.</p>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script src="./assets/js/navbar.js"></script>
-  <script src="./assets/js/dropdown.js"></script>
-  <script src="./assets/js/modal.js"></script>
-  <script src="./assets/js/checkout.js"></script>
-</body>
-
+    <!-- SCRIPTS -->
+    <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/dropdown.js"></script>
+    <script src="./assets/js/modal.js"></script>
+    <script src="./assets/js/checkout.js"></script>
+  </body>
 </html>

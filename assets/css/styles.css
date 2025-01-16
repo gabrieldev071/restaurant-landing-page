@@ -88,7 +88,7 @@ body {
 
 .header {
   width: 100%;
-  height: 180px;
+  height: 130px;
   background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url("/assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg");
   background-position: center center;
   background-size: cover;
@@ -110,7 +110,7 @@ body {
 }
 
 .header__logoImage-img {
-  height: 100px;
+  height: 80px;
 }
 
 .header__nav {
@@ -382,108 +382,33 @@ body {
 .category__title-wrapper {
   background: url("/assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg") no-repeat center center;
   background-size: cover;
-  padding: 20px;
+  padding: 15px;
   text-align: left;
   margin-bottom: 10px;
-}
-
-.categories__title {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 .category {
   margin-bottom: 40px;
-  padding: 20px;
-  background-color: #f9f9f9;
+  padding: 20px 0;
   border-radius: 10px;
 }
 
 .category__title {
-  color: #fff;
   font-size: 2rem;
   font-weight: bold;
-  margin: 0;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .category__description {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.category__cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: calc(33.333% - 20px); /* 3 cards por linha */
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.card__image {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-.card__title {
   font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.card__description {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-.card__serves {
-  font-size: 0.85rem;
-  color: #777;
-  margin-bottom: 10px;
-}
-
-.card__price {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.card__button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.card__button:hover {
-  background-color: #0056b3;
+  margin: 1rem 0;
+  text-transform: uppercase;
 }
 
 /* Responsividade */
@@ -519,22 +444,37 @@ body {
   transition: background-color 0.3s ease;
 }
 
+.card__button {
+  background-color: #11d131;
+  color: #fff;
+  border: none;
+  border-radius: 30%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.card__button:hover {
+  background-color: #0056b3;
+}
+
 /* ===============================
    Formulário de Contato
 ================================ */
 .contact {
   background-color: #f9f9f9;
   border-radius: 10px;
-  margin: 40px auto;
-  max-width: 800px;
-  padding: 30px 20px;
+  max-width: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact__title {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -590,6 +530,78 @@ body {
 
 .contact__button:hover {
   background-color: #0056b3;
+}
+
+.category__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 1.2rem;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 300px;
+  height: 120px;
+  gap: 1.2rem;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card__img {
+  height: 100%;
+}
+
+.card--image {
+  width: 120px;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.card__text {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card__description {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.card__serves {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.card__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price-number {
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 /* Modal base */

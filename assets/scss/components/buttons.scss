@@ -20,3 +20,22 @@
 
  
 }
+
+
+.card__button {
+  background-color: #11d131;
+  color: #fff;
+  border: none;
+  border-radius: 30%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.card__button:hover {
+  background-color: #0056b3;
+}
