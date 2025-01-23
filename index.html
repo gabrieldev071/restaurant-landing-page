@@ -8,12 +8,21 @@
       content="Costelaria Barba Branca - As melhores costelas assadas de Campina Grande, PB. Confira nosso cardápio!"
     />
     <title>Costelaria Barba Branca</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7xvPSv8f6bqZYP45PgoeEtIRrJ6C3EZdj9"
       crossorigin="anonymous"
     ></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+
     <script
       src="https://kit.fontawesome.com/78f50e1103.js"
       crossorigin="anonymous"
@@ -34,8 +43,8 @@
       </div>
       <nav class="header__nav">
         <div class="header__store">
-          <h1 class="header__store-title">
-            <a href="/" class="header__logo">COSTELARIA BARBA BRANCA</a>
+          <h1 class="">
+            <a href="/" class="header__store-title">COSTELARIA BARBA BRANCA</a>
           </h1>
           <h2 class="header__store-address">
             R. Lino Gomes Filho, 992a - Castelo Branco, Campina Grande - PB,
@@ -413,6 +422,15 @@
       </div>
     </main>
 
+    <section class="maps-section baseContainer" id="sobre">
+      <!-- Sobre o projeto-->
+      <div class="custom-container">
+        <h4 class="custom-title-maps">NOSSA LOCALIZAÇÃO</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quo quia voluptas sunt eos saepe rem et aliquid maiores! Eius impedit expedita deserunt incidunt doloremque omnis totam? Quod, hic numquam!</p>
+      </div>
+      <div id="mapid" class="custom-map"></div>
+    </section>
+
     <!-- CONTATO -->
     <section id="contact" class="contact baseContainer">
       <h2 class="contact__title">Contato</h2>
@@ -449,8 +467,11 @@
 
     <!-- SCRIPTS -->
     <script src="./assets/js/navbar.js"></script>
-    <script src="./assets/js/dropdown.js"></script>
+    <script src="./assets/js/dropwn.js"></script>
     <script src="./assets/js/modal.js"></script>
+    <script src="./assets/js/search.js"></script>
     <script src="./assets/js/checkout.js"></script>
+    <script src="./assets/js/maps.js"></script>
+
   </body>
 </html>

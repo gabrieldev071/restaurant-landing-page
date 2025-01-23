@@ -1,7 +1,11 @@
 .header {
   width: 100%;
   height: 130px;
-  background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url("/assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg");
+  background-image: linear-gradient(
+      rgba(29, 29, 29, 0.8),
+      rgba(29, 29, 29, 0.8)
+    ),
+    url("/assets/img/costela-defumada-para-churrasco-com-fundo-escuro_911620-761.jpg");
   background-position: center center;
   background-size: cover; // Ajusta a imagem para cobrir o header
   background-repeat: no-repeat;
@@ -9,7 +13,6 @@
   align-items: center;
   color: #f3f1ee;
   gap: 1.6rem;
-  
 }
 
 .header__store {
@@ -29,12 +32,6 @@
 .header__nav {
   @include flex-row-space-between;
   width: 100%;
-
-  .header__logo {
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
 
   .header__menu {
     @include flex-row-center;
@@ -69,38 +66,38 @@
       margin: 8px;
     }
   }
+}
 
-  @media (max-width: 999px) {
-    .header__menu {
-      position: absolute;
-      top: 10vh;
-      right: 0;
-      width: 50vw;
-      height: 92vh;
-      background-color: saturate($color: #f3f1ee, $amount: 10%);
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in;
+.header__store-title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
-      &.active {
-        transform: translateX(0);
+/* Responsividade */
 
-        .header__menu-item {
-          opacity: 1;
-          animation: navLinkFade 0.5s ease forwards;
-        }
-      }
 
-      .header__menu-item {
-        margin-left: 0;
-        opacity: 0;
-      }
-    }
+/* Responsividade */
+@media (max-width: 768px) {
 
-    .mobile-menu {
-      display: block;
-    }
+  .header__menu {
+    display: none;
+  }
+  .header__logoImage-img {
+    height: 60px;
+  }
+
+  .header__store-address {
+    display: none;
+  }
+
+  .header__store-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__store-address {
+    display: none;
   }
 }
